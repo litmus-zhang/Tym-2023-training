@@ -35,15 +35,15 @@ root.geometry('300x400')
 
 root.resizable(0, 0)
 
-root.configure(bg='palevioletred')
+root.configure(bg='#00bfff')
 
 #Heading label
-Label(root, text="Contechs To Do List", bg='palevioletred', font=("Comic Sans MS", 15), wraplength=300).place(x=35, y=0)
+Label(root, text="Contechs To Do List", bg='palevioletred', font=("Arial", 15), wraplength=300).place(x=35, y=0)
 
 
 
 # List of tasks
-tasks = Listbox(root, selectbackground="Gold", bg='Silver', font=('Helvetica', 12), height=12, width=25)
+tasks = Listbox(root, selectbackground="Gold", bg='Silver', font=('Arial', 12), height=12, width=25)
 
 scroller = Scrollbar(root, orient=VERTICAL, command=tasks.yview)
 scroller.place(x=260, y=50, height=232)
@@ -68,13 +68,13 @@ new_item_entry.place(x=35, y=310)
 
 # Creating the button to add a new task
 
-add_btn = Button(root, text="Add Item", bg="Azure", width=10, font=('Helvetica', 12), command=lambda: add_item(new_item_entry, tasks))
+add_btn = Button(root, text="Add Item", bg="Azure", width=10, font=('Arial', 12), command=lambda: add_item(new_item_entry, tasks))
 
 
 add_btn.place(x=35, y=350)
 
 
-delete_btn = Button(root, text="Delete Item", bg="Azure", width=10, font=('Helvetica', 12), command=lambda: delete_item(tasks))
+delete_btn = Button(root, text="Delete Item", bg="Azure", width=10, font=('Arial', 12), command=lambda: delete_item(tasks))
 
 delete_btn.place(x=150, y=350)
 
